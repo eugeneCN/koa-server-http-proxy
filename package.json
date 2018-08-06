@@ -1,7 +1,7 @@
 {
   "name": "koa-server-http-proxy",
   "version": "0.1.0",
-  "description": "koa-server-http-proxy",
+  "description": "A koa2 http-proxy-middleware.",
   "main": "index.js",
   "directories": {
     "example": "examples"
