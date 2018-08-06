@@ -33,6 +33,27 @@ app.use(proxy('/api', {
   changeOrigin: true
 }))
 
+
+or ...
+
+const proxyTable = {
+  '/json': {
+    target: 'http://jsonplaceholder.typicode.com',
+    pathRewrite: { '^/json': '' },
+    changeOrigin: true
+  },
+  '/api': {
+    target: 'https://news-at.zhihu.com',
+    pathRewrite: { '^/api': 'api/4/' },
+    changeOrigin: true
+  }
+}
+
+Object.keys(proxyTable).forEach((context) => {
+  var options = proxyTable[context]
+  app.use(proxy(context, options))
+})
+
 app.listen(3000)
 
 
