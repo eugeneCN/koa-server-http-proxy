@@ -29,6 +29,14 @@ app.listen(3000)
 
 ```
 
+
+## Browser
+
+```
+http://127.0.0.1:3000/api/themes
+```
+
+
 ## Example2
 
 ```js
@@ -61,11 +69,6 @@ app.listen(3000)
 
 ```
 
-## Browser
-
-```
-http://127.0.0.1:3000/api/themes
-```
 
 ## Options
 
