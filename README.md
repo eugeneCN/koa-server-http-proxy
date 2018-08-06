@@ -1,8 +1,6 @@
 
 # koa-server-http-proxy
 
-[![Build Status](https://github.com/chimurai/http-proxy-middleware.svg?branch=master)](https://github.com/chimurai/http-proxy-middleware)
-
 A koa2 http-proxy-middleware.
 
 ## Installation
