@@ -9,15 +9,6 @@ A koa2 http-proxy-middleware.
 $ npm install koa-server-http-proxy --save
 ```
 
-## Options
-
-All options are passed to `http-proxy-middleware`, except that if options is passed
-as a string, it will normalized as options' target.
-
-See [http-proxy-middleware](https://github.com/chimurai/http-proxy-middleware#options) for full list of
-accepted options.
-
-
 ## Example
 
 ```js
@@ -33,8 +24,19 @@ app.use(proxy('/api', {
   changeOrigin: true
 }))
 
+app.listen(3000)
 
-or ...
+
+```
+
+## Example2
+
+```js
+const Koa = require('koa')
+
+const app = new Koa()
+
+const proxy = require('koa-server-http-proxy')
 
 const proxyTable = {
   '/json': {
@@ -64,6 +66,14 @@ app.listen(3000)
 ```
 http://127.0.0.1:3000/api/themes
 ```
+
+## Options
+
+All options are passed to `http-proxy-middleware`, except that if options is passed
+as a string, it will normalized as options' target.
+
+See [http-proxy-middleware](https://github.com/chimurai/http-proxy-middleware#options) for full list of
+accepted options.
 
 ## License
 
